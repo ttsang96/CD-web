@@ -1,0 +1,53 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/Admin_page.css">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<title></title>
+</head>
+<body>
+
+	<%
+ArrayList<Menu_system> listMenu = Dao.getListMenu();
+if(session.getAttribute("user_webTMDT") == null){
+	response.sendRedirect("login_page.jsp");
+}
+%>
+<div id="left" style="height: auto">
+		<div id="logo">
+			<a href="new_food.jsp"><img src="images/logo_TTS.png" alt="this is a logo"></a>
+		</div>
+		<div id="listoption">
+<%
+							for (Menu_system menu_system : listMenu) {
+								out.print("<br> <a href='"+menu_system.getUrl_menu()+"'><button class='btn-info' style='text-align: left'>"+menu_system.getName_menu()+"</button></a>");								}
+%>
+		</div>
+
+	</div>
+	<div id="container" style="height: auto">
+		<jsp:include page="content-comment.jsp"></jsp:include>
+	</div>
+	<div id="temp"></div>
+
+
+
+
+
+
+</body>
+</html>

@@ -21,14 +21,14 @@ public class User implements Serializable {
     
     @Column(name = "id_user", nullable = false)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private String id;
     
-    @NotEmpty
+    
     @Column(name ="first_name_user",nullable = false)
     private String fname;
     
-    @NotEmpty
+    
     @Column(name= "last_name_user", nullable= false)
     private String lname;
     
@@ -38,12 +38,12 @@ public class User implements Serializable {
     @Column(name ="access_kind", nullable = false)
     private String access_kind;
     
-    @NotEmpty
-    @Email
+    
+    
     @Column(name ="email_user", nullable= false)
     private String email_user;
     
-    @NotEmpty
+    
     @Column (name ="password_user", nullable = false)
     private String password_user;
     

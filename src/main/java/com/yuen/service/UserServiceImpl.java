@@ -1,6 +1,5 @@
 package com.yuen.service;
 
-import java.util.Iterator;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +31,5 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		userrepository.save(user);
 	}
-
 
 }
