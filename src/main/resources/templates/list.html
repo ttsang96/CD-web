@@ -1,0 +1,33 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+
+<title>Đăng kí tài khoản</title>
+<body>
+    <nav th:replace="layout :: header"></nav>
+ <div class="row col-md-8">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                           
+                            <th>First Name</th>
+                            <th>LastName</th>
+                            
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="contact,iterStat : ${users}">
+                           <td th:text="${contact.fname}"></td>
+                            <td th:text="${contact.fname}"></td>
+                            <td th:text="${contact.lname}"></td>
+                           
+                            <td><a th:href="@{/contact/{id}/edit(id=${contact.id})}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                            <td><a th:href="@{/contact/{id}/delete(id=${contact.id})}"><span class="glyphicon glyphicon-trash"></span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+
+<title>Đăng kí tài khoản</title>
+<body>
+	<div class="container col-md-5 col-sm-6 container-login">
+		<h1 class="title-login  col-md-12">
+			<a href="new_food.jsp ">TTS Food</a>
+		</h1>
+		<div class="cont-login col-md-10">	
+
+
+			<h2 class="n1" style="text-align: center">Đăng kí</h2>
+			<form method="post" action="#" th:action="@{/ttsfood/saveUser}">
+				<input type="hidden"  />
+				<div class=" form-group">
+					<label >Tên:</label> 
+					<input type="text"  name="lastName"
+						placeholder=" Tên" class="form-control" >
+						
+				</div>
+				<div class=" form-group">
+					<label >Họ:</label> <input type="text" name="firstName"
+						placeholder=" Họ" class="form-control">
+						
+				</div>
+				<div class="smale form-group" style="">
+					Giới tính: <select name="gender" >
+						<option value="1" selected="selected">Nam</option>
+						<option value="0">Nữ</option>
+					</select>
+				</div>
+				<div class=" form-group">
+					<label for="email">Email:</label> <input type="text" name="email_register"
+						placeholder="Địa chỉ email" class="form-control" >
+						
+				</div>
+				<div class=" form-group">
+					<label for="pwd"> Mật khẩu:</label> <input type="password"
+						name="password_register" placeholder=" Mật khẩu" class="form-control" >
+					
+				</div>
+				<div class=" form-group">
+					<label for="pwd"> Xác nhận mật khẩu:</label> <input type="password"
+						name="re_password_register" placeholder=" Mật khẩu" class="form-control">
+						
+				</div>
+				
+
+				<div class=" form-group">
+					<button type="submit" class="btn btn-primary btn-login"
+						value="Đăng kí">Đăng kí</button>
+				</div>
+
+				<div class=" form-group footer-login">
+					Đã có tài khoản! <a href="#" th:href="@{/ttsfood/login}"><ins>Đăng
+										nhập</ins></a>
+				</div>
+			</form>
+
+
+		</div>
+	</div>
+
+
+</body>

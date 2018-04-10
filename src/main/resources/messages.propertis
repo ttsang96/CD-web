@@ -1,0 +1,5 @@
+NotEmpty.user.fname=Vui lòng nhập họ
+NotEmpty.user.lname = Vui lòng nhập tên
+NotEmpty.user.email_user = Vui lòng nhập email
+Email.user.email_user = Vui lòng nhập đúng định dạng email
+NotEmpty.user.password_user= Vui lòng nhập mật khẩu
