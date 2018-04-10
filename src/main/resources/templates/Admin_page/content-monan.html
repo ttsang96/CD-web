@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link rel="stylesheet" type="text/css" href="css/Admin_page.css">
@@ -24,18 +24,7 @@
 </head>
 
 <body>
-	<%
-		ArrayList<Food> listSP = Dao.getListFood();
-		//ArrayList<Diadiem> listDD = DAO_ifood.getListDiaDiem();
-		ArrayList<Category> listLH = Dao.getListCategory();
-		if(session.getAttribute("user_webTMDT") == null){
-			response.sendRedirect("login_page.jsp");
-		}
-		String id_tmp = null;
-		if(session.getAttribute("user_webTMDT") != null){
-		 id_tmp = session.getAttribute("user_webTMDT").toString();
-		}
-	%>
+	
 	<div id="detail"
 		style="display: none; position: fixed; width: 420px; height: 1000px; margin-left: 650px; margin-top: 135px;">
 		<textarea id="detail_info" rows="15" cols="65"></textarea>
